@@ -32,7 +32,7 @@ public class Animal {
         totalAnimales++;
     }
 
-    public int getTotalAnimales() {
+    public static int getTotalAnimales() {
         return totalAnimales;
     }
 
