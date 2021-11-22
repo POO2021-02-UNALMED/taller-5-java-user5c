@@ -40,7 +40,7 @@ public class Ave extends Animal {
         this.colorPlumas = colorPlumas;
     }
     
-    public int cantidadAves() {
+    public static int cantidadAves() {
         return listado.size();
     }
     

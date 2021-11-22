@@ -81,35 +81,18 @@ public class Animal {
     }
     
     public static String totalPorTipo() {
-        int totalMamiferos = 0;
-        int totalAves = 0;
-        int totalReptiles = 0;
-        int totalPeces = 0;
-        int totalAnfibios = 0;
-        
-        ArrayList<Animal> animales;
-        animales = Zona.getAnimales();
-        
-        for(Animal animal: animales){
-            if (animal instanceof Mamifero) {
-                totalMamiferos = ((Mamifero) animal).cantidadMamiferos();
-            } else if (animal instanceof Ave) {
-                totalAves = ((Ave) animal).cantidadAves();
-            } else if (animal instanceof Reptil) {
-                totalReptiles = ((Reptil) animal).cantidadReptiles();
-            } else if (animal instanceof Pez) {
-                totalPeces = ((Pez) animal).cantidadPeces();
-            } else if (animal instanceof Anfibio) {
-                totalAnfibios = ((Anfibio) animal).cantidadAnfibios();
-            }
-        }
+        int totalMamiferos = Mamifero.cantidadMamiferos();
+        int totalAves = Ave.cantidadAves();
+        int totalReptiles = Reptil.cantidadReptiles();
+        int totalPeces = Pez.cantidadPeces();
+        int totalAnfibios = Anfibio.cantidadAnfibios();
         
         String porTipo = "Mamiferos: " + totalMamiferos + "\n"
                 + "Aves: " + totalAves + "\n"
                 + "Reptiles: " + totalReptiles + "\n"
                 + "Peces: " + totalPeces + "\n"
                 + "Anfibios: " + totalAnfibios;
-        
+
         return porTipo;
     }
     

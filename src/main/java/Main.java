@@ -41,7 +41,6 @@ public class Main {
         System.out.println(z3.getZoo().getNombre());
         
         z2.agregarAnimales(Mamifero.crearCaballo("caballo1", 11, "F"));
-        System.out.println(Mamifero.totalPorTipo());
         
         new Anfibio();
         new Anfibio();

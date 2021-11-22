@@ -17,12 +17,12 @@ public class Zona {
     private static ArrayList<Animal> animales = new ArrayList<Animal>();
 
     public Zona() {
-       this.zoo = new Zoologico();
     }
 
     public Zona(String nombre, Zoologico zoo) {
         this.nombre = nombre;
         this.zoo = zoo;
+        this.zoo.agregarZonas(this);
     }
     
     public void agregarAnimales(Animal animal) {
