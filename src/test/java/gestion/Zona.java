@@ -26,11 +26,11 @@ public class Zona {
     }
     
     public void agregarAnimales(Animal animal) {
-        Zona.animales.add(animal);
+        animales.add(animal);
     }
     
-    public int cantidadAnimales() {
-        return Zona.animales.size();
+    public static int cantidadAnimales() {
+        return animales.size();
     }
 
     public String getNombre() {
