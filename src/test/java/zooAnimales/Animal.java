@@ -104,12 +104,11 @@ public class Animal {
             }
         }
         
-        String porTipo = ""
-                + "Mamiferos: " + totalMamiferos
-                + "\nAves: " + totalAves
-                + "\nReptiles: " + totalReptiles
-                + "\nPeces: " + totalPeces
-                + "\nAnfibios: " + totalAnfibios;
+        String porTipo = "Mamiferos: " + totalMamiferos + "\n"
+                + "Aves: " + totalAves + "\n"
+                + "Reptiles: " + totalReptiles + "\n"
+                + "Peces: " + totalPeces + "\n"
+                + "Anfibios: " + totalAnfibios;
         
         return porTipo;
     }
@@ -117,7 +116,7 @@ public class Animal {
     @Override
     public String toString() {
         String string =  ""
-            + "Mi nombre es"+nombre+", tengo una edad de "+edad+", "
+            + "Mi nombre es "+nombre+", tengo una edad de "+edad+", "
             + "habito en "+habitat+" y mi genero es "+genero;
         
         if(zona != null) {
