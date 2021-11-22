@@ -18,7 +18,6 @@ public class Ave extends Animal {
     private String colorPlumas;
 
     public Ave() {
-        super();
         listado.add(this);
     }
 
@@ -40,7 +39,7 @@ public class Ave extends Animal {
         this.colorPlumas = colorPlumas;
     }
     
-    public int cantidadAves() {
+    public static int cantidadAves() {
         return listado.size();
     }
     

@@ -17,20 +17,20 @@ public class Zona {
     private static ArrayList<Animal> animales = new ArrayList<Animal>();
 
     public Zona() {
-       this.zoo = new Zoologico();
     }
 
     public Zona(String nombre, Zoologico zoo) {
         this.nombre = nombre;
         this.zoo = zoo;
+        this.zoo.agregarZonas(this);
     }
     
     public void agregarAnimales(Animal animal) {
-        Zona.animales.add(animal);
+        animales.add(animal);
     }
     
     public int cantidadAnimales() {
-        return Zona.animales.size();
+        return animales.size();
     }
 
     public String getNombre() {

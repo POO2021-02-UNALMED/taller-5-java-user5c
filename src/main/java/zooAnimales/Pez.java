@@ -19,7 +19,6 @@ public class Pez extends Animal {
     private int cantidadAletas;
 
     public Pez() {
-        super();
         listado.add(this);
     }
 
@@ -50,7 +49,7 @@ public class Pez extends Animal {
         this.cantidadAletas = cantidadAletas;
     }
     
-    public int cantidadPeces() {
+    public static int cantidadPeces() {
         return listado.size();
     }
 

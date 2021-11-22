@@ -19,40 +19,31 @@ public class Main {
      */
     public static void main(String[] args) {
         Zoologico zoo = new Zoologico();
-        Zoologico zoo1 = new Zoologico("Zoologico 1", "Ubicación 1");
-        
         Zona z1 = new Zona();
-        Zona z2 = new Zona("zona2", zoo);
-        Zona z3 = new Zona("zona3", zoo1);
+        Zona z2 = new Zona();
+        zoo.agregarZonas(z1);
+        zoo.agregarZonas(z2);
+        z1.agregarAnimales(Mamifero.crearCaballo("test", 11, "M"));
+        z1.agregarAnimales(Mamifero.crearCaballo("test", 11, "M"));
+        z1.agregarAnimales(Mamifero.crearLeon("test", 11, "M"));
+        z1.agregarAnimales(Ave.crearHalcon("test", 11, "M"));
+        z1.agregarAnimales(Ave.crearHalcon("test", 11, "M"));
+        z1.agregarAnimales(Ave.crearAguila("test", 11, "M"));
+        z1.agregarAnimales(Ave.crearAguila("test", 11, "M"));
+        z1.agregarAnimales(Anfibio.crearRana("test", 11, "M"));
+        z2.agregarAnimales(Anfibio.crearSalamandra("test", 11, "M"));
+        z2.agregarAnimales(Reptil.crearIguana("test", 11, "M"));
+        z2.agregarAnimales(Reptil.crearSerpiente("test", 11, "M"));
+        z2.agregarAnimales(Pez.crearSalmon("test", 11, "M"));
+        z2.agregarAnimales(Pez.crearBacalao("test", 11, "M"));
+        Mamifero.crearCaballo("test", 11, "M");
+        Ave.crearHalcon("test", 11, "M");
+        Anfibio.crearRana("test", 11, "M");
+        Reptil.crearIguana("test", 11, "M");
+        Pez.crearBacalao("test", 11, "M");
         
-        
-        System.out.println(z1);
-        System.out.println(z1.getNombre());
-        System.out.println(z1.getZoo());
-        System.out.println("-----");
-        System.out.println(z2);
-        System.out.println(z2.getNombre());
-        System.out.println(z2.getZoo());
-        System.out.println(z2.getZoo().getNombre());
-        System.out.println("-----");
-        System.out.println(z3);
-        System.out.println(z3.getNombre());
-        System.out.println(z3.getZoo());
-        System.out.println(z3.getZoo().getNombre());
-        
-        z2.agregarAnimales(Mamifero.crearCaballo("caballo1", 11, "F"));
-        
-        new Anfibio();
-        new Anfibio();
-        new Mamifero();
-        new Mamifero();
-        new Mamifero();
-        new Reptil();
-        new Pez();
-        new Ave();
-        new Ave();
-        
-        System.out.println(Animal.totalPorTipo());
+        System.out.println(zoo.getZona().get(0).cantidadAnimales());
+        System.out.println(zoo.cantidadTotalAnimales());
         
     }
     

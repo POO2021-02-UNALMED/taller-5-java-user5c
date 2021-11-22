@@ -50,10 +50,7 @@ public class Zoologico {
     }
     
     public int cantidadTotalAnimales() {
-        int totalAnimales = 0;
-        for(Zona zona: Zoologico.zonas){
-            totalAnimales += zona.cantidadAnimales();
-        }
+        int totalAnimales = Zona.cantidadAnimales();
         return totalAnimales;
     }
     
